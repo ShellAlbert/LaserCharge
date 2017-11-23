@@ -1,0 +1,404 @@
+QTreeWidget#ZCinemaDataTree{
+    background-color: #464646;
+    font-size:12px;
+    color: white;
+}
+QTreeWidget#ZCinemaDataTree::item{
+    margin:3px;
+    background: #5B677A;
+    background-clip: margin;
+}
+QTreeWidget#ZCinemaDataTree::branch{
+    background:#5B677A;
+}
+QTreeView#ZCinemaDataTree::item:hover {
+    background: rgb(69, 187, 217);;
+}
+QTreeView#ZCinemaDataTree::item:selected:active{
+    background: rgb(63, 147, 168);
+}
+QTreeView#ZCinemaDataTree::item:selected:!active {
+    background: rgb(63, 147, 168);
+}
+QHeaderView::section{
+    background:skyblue;
+}
+
+/************************************************/
+/*Qmenu Style Sheets*/
+ QMenu {
+     background-color: white; /* sets background of the menu 设置整个菜单区域的背景色，我用的是白色：white*/
+     border: 1px solid white;/*整个菜单区域的边框粗细、样式、颜色*/
+ }
+
+ QMenu::item {
+     /* sets background of menu item. set this to something non-transparent
+         if you want menu color and menu item color to be different */
+     background-color: transparent;
+     padding:8px 32px;/*设置菜单项文字上下和左右的内边距，效果就是菜单中的条目左右上下有了间隔*/
+     margin:0px 4px;/*设置菜单项的外边距*/
+     border-bottom:1px solid #DBDBDB;/*为菜单项之间添加横线间隔*/
+     font-size:14px;
+ }
+
+ QMenu::item:selected { /* when user selects item using mouse or keyboard */
+     background-color: #2dabf9;/*这一句是设置菜单项鼠标经过选中的样式*/
+ }
+/*************************************************/
+QToolButton {
+    background-color: #D8ECFC;
+    border: 2px transparent #76797C;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 5px;
+    font-size:12px;
+}
+QToolButton::hover {
+    background-color: #C4E0F7;
+}
+
+
+/**************************************************/
+QFrame#ZToolBar{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                            stop: 0 #D8ECFC, stop: 0.4 #CFE7FA,
+                            stop: 0.5 #CBE4F9, stop: 1.0 #C4E0F7);
+}
+
+QLabel#ZToolBarAppName{
+    background:transparent;
+    font-size:26px;
+    font-weight:bold;
+    color:#5893C1;
+}
+QToolButton#ZToolBarButton{background:transparent;}
+
+QToolButton#ZToolBarButton:hover{
+background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                            stop: 0 #D8ECFC, stop: 0.4 #CFE7FA,
+                            stop: 0.5 #CBE4F9, stop: 1.0 #C4E0F7);
+}
+QToolButton::menu-indicator { image: None; }
+/****************************************/
+
+QDialog#ZDialogErrMsg{
+    background-color: #4E4E4E;
+    color:white;
+    font-size:12px;
+}
+QLabel#ZDialogErrMsgMessage{
+    background:transparent;
+    color:white;
+}
+
+/***********************************************/
+QDialog#ZDialogAddProvince{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogAddProvinceLabelTips{
+    background:transparent;
+    color:white;
+    font-size:16px;
+}
+QDialog#ZDialogDelProvince{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogDelProvinceAskLabel{
+    background:transparent;
+    color:white;
+    font-size:16px;
+}
+/****************************************/
+QDialog#ZDialogAddCity{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogAddCityLabelTips{
+    background:transparent;
+    color:white;
+}
+
+QDialog#ZDialogDelCity{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogDelCityAskLabel{
+    background:transparent;
+    color:white;
+}
+/****************************************/
+QDialog#ZDialogAddCinema{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogAddCinemaLabelTips{
+    background:transparent;
+    color:white;
+}
+QDialog#ZDialogDelCinema{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogDelCinemaAskLabel{
+    background:transparent;
+    color:white;
+}
+/****************************************/
+QDialog#ZDialogAddDevice{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogAddDeviceLabel{
+    background:transparent;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding:4px;
+}
+QLabel#ZDialogAddDeviceLabelDevID{
+    background:transparent;
+    color:white;
+}
+QDialog#ZDialogDelDevice{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogDelDeviceAskLabel{
+    background:transparent;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding:4px;
+}
+/****************************************/
+QDialog#ZDialogChargeDev{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogChargeDevID{
+    background:transparent;
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+    padding:6px;
+}
+
+QToolButton#ZDialogChargeDevButton {
+    background-color: #D8ECFC;
+    border: 2px transparent #76797C;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 5px;
+    font-size:20px;
+
+    min-width:40px;
+    min-height:40px;
+}
+QToolButton#ZDialogChargeDevButton::hover {
+    background-color: #C4E0F7;
+}
+QToolButton#ZDialogChargeDevButton0 {
+    background-color: #D8ECFC;
+    border: 2px transparent #76797C;
+    border-radius: 4px;
+    margin: 4px;
+    padding: 5px;
+    font-size:20px;
+
+    min-width:100px;
+    min-height:40px;
+}
+QToolButton#ZDialogChargeDevButton0::hover {
+    background-color: #C4E0F7;
+}
+
+QLineEdit#ZDialogChargeDevChargeHour{
+    background-color: #232629;
+    padding: 5px;
+    border-style: solid;
+    border: 1px solid #76797C;
+    border-radius: 2px;
+    color: #eff0f1;
+    font-size:80px;
+    font-weight:bold;
+}
+QLabel#ZDialogChargeDevUUID{
+    background:transparent;
+    color:white;
+}
+QLineEdit#ZDialogChargeDevUUIDLineEdit{
+    background-color: #232629;
+    padding: 2px;
+    border-style: solid;
+    border: 1px solid #76797C;
+    border-radius: 2px;
+    color: #eff0f1;
+    font-size:16px;
+}
+/*******************************************/
+QDialog#ZDialogChargeHistory{
+    background-color: #4E4E4E;
+    color:white;
+}
+QLabel#ZDialogChargeHistoryTipsLabel{
+    background:transparent;
+    color:white;
+    padding:4px;
+}
+/*******************************************/
+QDialog#ZDialogRestorePoint{
+    background-color: #4E4E4E;
+    color:white;
+}
+/***************************************/
+QTreeWidget{
+    background-color: #464646;
+    font-size:12px;
+    color: white;
+}
+
+QSplitter::handle {
+    border: 1px dashed #76797C;
+}
+
+QSplitter::handle:hover {
+    background-color: #787876;
+    border: 1px solid #76797C;
+}
+
+QSplitter::handle:horizontal {
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    height: 2px;
+}
+/***************************************/
+QFrame#ZProvinceData{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #62A1FF, stop: 0.4 #BDC4FC,
+                                stop: 0.5 #A6CCF4, stop: 1.0 #F9E8F8);
+}
+QLabel#ZProvinceDataProvince{
+    background:transparent;
+    font-size:30px;
+    font-weight:bold;
+    color:black;
+}
+QLabel#ZProvinceDataCityList{
+    background-color: #4E4E4E;
+    border-width: 4px;
+    border-radius: 8px;
+    border-color: #11223F;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding:8px;
+}
+QLabel#ZProvinceDataCityList:hover{
+    background-color: #51A8D5;
+}
+QLabel#ZProvinceDataCityCinemaNum{
+    background-image: url(:/icons/images/ChildNum.png);
+    font-size:10px;
+    color:black;
+    padding:2px;
+}
+/***************************************/
+QFrame#ZCityData{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #62A1FF, stop: 0.4 #BDC4FC,
+                                stop: 0.5 #A6CCF4, stop: 1.0 #F9E8F8);
+}
+QLabel#ZCityDataCityLabel{
+    /*background:transparent;*/
+    background-color: #4E4E4E;
+    font-size:30px;
+    font-weight:bold;
+    color:white;
+    border-radius: 60px;
+}
+QLabel#ZCityDataCinemaLabel{
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #617280, stop: 0.4 #6A7C8B,
+                                stop: 0.5 #697A89, stop: 1.0 #7D90A0);
+    border-width: 4px;
+    border-radius: 10px;
+    border-color: #11223F;
+    font-size:20px;
+    font-weight:bold;
+    color:white;
+    padding:8px;
+}
+QLabel#ZCityDataCinemaLabel:hover{
+    background-color: #51A8D5;
+}
+/***************************************/
+QFrame#ZCinemaData{
+    background-color: #4E4E4E;
+}
+QLabel#ZCinemaDataTips{
+    background:transparent;
+    color:white;
+    font-size:12px;
+    padding:3px;
+}
+/***************************************/
+QFrame#ZPropertyEditor{
+    background-color: #4E4E4E;
+}
+QLabel#ZPropertyEditorTotalHours{
+    background:#AE8300;
+    color:white;
+    font-size:60px;
+    font-weight:bold;
+    padding:2px;
+}
+QLabel#ZPropertyEditorDeviceID{
+    background:#58691A;
+    color:white;
+    font-size:25px;
+    padding:2px;
+}
+QLabel#ZPropertyEditorProvince{
+    background:#005054;
+    color:white;
+    font-size:20px;
+    padding:2px;
+}
+QLabel#ZPropertyEditorCity{
+    background:#01686F;
+    color:white;
+    font-size:18px;
+    padding:2px;
+}
+QLabel#ZPropertyEditorCinema{
+    background:#004D91;
+    color:white;
+    font-size:16px;
+    padding:2px;
+}
+QLabel#ZPropertyEditorMemo{
+    background:#650F53;
+    color:white;
+    font-size:18px;
+    padding:2px;
+}
+QLabel#ZPropertyEditorAction{
+    background:#0075C2;
+    color:white;
+    font-size:10px;
+    padding:1px;
+}
+/***************************************/
+QFrame#ZStatusBar{
+    background-color:#3E3E3E;
+    color: white;
+}
+QLabel#ZStatusBarNotifyMsg{
+    background:transparent;
+    color:white;
+    padding:3px;
+}

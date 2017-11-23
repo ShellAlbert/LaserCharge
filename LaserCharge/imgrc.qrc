@@ -1,0 +1,55 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>images/DeviceManage.png</file>
+        <file>images/PlaceManage.png</file>
+        <file>images/AppName.png</file>
+        <file>images/Charge.png</file>
+        <file>images/HistoryRecord.png</file>
+        <file>images/SystemManage.png</file>
+        <file>images/PropertyEditor.png</file>
+        <file>images/Error.png</file>
+        <file>images/Add.png</file>
+        <file>images/Delete.png</file>
+        <file>images/Cinema.png</file>
+        <file>images/City.png</file>
+        <file>images/Device.png</file>
+        <file>images/Province.png</file>
+        <file>images/Cancel.png</file>
+        <file>images/Okay.png</file>
+        <file>images/ChildNum.png</file>
+        <file>images/Export.png</file>
+        <file>images/Import.png</file>
+        <file>images/Move.png</file>
+        <file>images/Down.png</file>
+        <file>images/Up.png</file>
+        <file>images/Question.png</file>
+        <file>images/Detail.png</file>
+        <file>images/DetailActive.png</file>
+        <file>images/Filter.png</file>
+        <file>images/Dev_ID.png</file>
+        <file>images/Help.png</file>
+        <file>images/Diagram.png</file>
+        <file>images/History.png</file>
+        <file>images/Hours.png</file>
+        <file>images/Setup.png</file>
+        <file>images/Period.png</file>
+        <file>images/Copy.png</file>
+        <file>images/Laser.png</file>
+        <file>images/splash.png</file>
+        <file>images/Search.png</file>
+        <file>images/Expand.png</file>
+        <file>images/Inpad.png</file>
+        <file>images/Add2.png</file>
+        <file>images/Delete2.png</file>
+        <file>images/Export2.png</file>
+    </qresource>
+    <qresource prefix="/ui">
+        <file>skins/gray.qss</file>
+        <file>skins/lightYellow.qss</file>
+    </qresource>
+    <qresource prefix="/pinyin">
+        <file>database/chinese.db</file>
+        <file>database/mutil_pinyin.db</file>
+        <file>database/pinyin.db</file>
+    </qresource>
+</RCC>
