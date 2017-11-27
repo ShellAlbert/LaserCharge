@@ -6,64 +6,18 @@
 #include <QSplashScreen>
 #include <QDir>
 #include "zdialog.h"
-extern "C"{
-    #include "openssl/ssl.h"
-    #include "openssl/sha.h"
-    #include "openssl/aes.h"
-}
-
-std::string sha256(const std::string str)
+#include "zrsamanager.h"
+extern "C"
 {
-    char buf[2];
-    unsigned char hash[SHA256_DIGEST_LENGTH];
-    SHA256_CTX sha256;
-    SHA256_Init(&sha256);
-    SHA256_Update(&sha256, str.c_str(), str.size());
-    SHA256_Final(hash, &sha256);
-    std::string newString = "";
-    for(int i = 0; i < SHA256_DIGEST_LENGTH; i++)
-    {
-        sprintf(buf,"%02x",hash[i]);
-        newString = newString + buf;
-    }
-    return newString;
-}
-void createRSAKey(QString devId)
-{
-    QString keyPath=QDir::currentPath()+"/key";
-    QDir keyDir;
-    if(!keyDir.exists(keyPath))
-    {
-        keyDir.mkpath(keyPath);
-    }
-    BIGNUM *bne=BN_new();
-    qint32 ret=BN_set_word(bne,RSA_F4);
-    RSA *rsa=RSA_new();
-    ret=RSA_generate_key_ex(rsa,1024,bne,NULL);
-    if(ret<0)
-    {
-        qDebug()<<"failed to generate RSA key!";
-        return;
-    }
-    QString fileName=keyPath+"/"+devId+".pem";
-    QByteArray baFileName=fileName.toLatin1();
-    FILE *fpPrivate=fopen(baFileName.data(),"wb");
-    if(fpPrivate)
-    {
-        PEM_write_RSAPrivateKey(fpPrivate,rsa,NULL,NULL,0,NULL,NULL);
-        fclose(fpPrivate);
-    }else{
-        qDebug()<<"failed to dump private key to file";
-    }
+    #include "openssl/applink.c"
 }
 int main(int argc, char *argv[])
 {
 
     QApplication app(argc, argv);
 
-    std::string str = "Hello World";
-    qDebug() << QString::fromStdString(sha256(str));
-    //createRSAKey("11111111");
+    ZRSAManager rsaManager;
+    rsaManager.createRSAKey("zsy");
 
     QSplashScreen splash(QPixmap(":/icons/images/splash.png"));
     splash.show();

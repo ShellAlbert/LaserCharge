@@ -36,7 +36,8 @@ SOURCES += \
     zprovincedata.cpp \
     zcinemadata.cpp \
     zcustomwidget.cpp \
-    zcitydata.cpp
+    zcitydata.cpp \
+    zrsamanager.cpp
 
 HEADERS += \
         mainui.h \
@@ -49,7 +50,8 @@ HEADERS += \
     zprovincedata.h \
     zcinemadata.h \
     zcustomwidget.h \
-    zcitydata.h
+    zcitydata.h \
+    zrsamanager.h
 
 RESOURCES += \
     imgrc.qrc
@@ -57,6 +59,8 @@ RESOURCES += \
 DISTFILES += \
     skins/lightYellow.qss
 
-INCLUDEPATH += C:\OpenSSL-Win32\include
-LIBS += C:\OpenSSL-Win32\lib\MinGW\libssl-1_1.a C:\OpenSSL-Win32\lib\MinGW\libcrypto-1_1.a
+LIBS += -LC:/OpenSSL-Win32/lib/MinGW -llibeay32
+LIBS += -LC:/OpenSSL-Win32/lib/MinGW -lssleay32
 
+
+INCLUDEPATH += $$quote(C:/OpenSSL-Win32/include)
